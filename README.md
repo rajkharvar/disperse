@@ -4,24 +4,32 @@ The Disperse app allows you to distribute any ERC20 tokens or ethers to multiple
 
 ## Deploy to a New Network ⛓️
 
+### Initial Setup
+
 1. Clone the repository:
-   `git clone https://github.com/rajkharvar/disperse-clone.git`
+   ```bash
+   git clone https://github.com/rajkharvar/disperse-clone.git
+   ```
 
 2. Install the dependencies:
 
 ```bash
-npm start
+npm install
 # or
-yarn start
+yarn install
 ```
 
-3. Modify the hardhat.config.js file to include the new network. Refer to the documentation at https://hardhat.org/hardhat-runner/docs/config for guidance.
+3. Modify the `hardhat.config.js` file to include the new network. Refer to the [Hardhat configuration documentation](https://hardhat.org/hardhat-runner/docs/config) for guidance.
+
+### Contract Deployment
 
 4. Deploy the contract:
 
+```bash
+npx hardhat run scripts/deploy.js --network [NETWORK]
 ```
-npx hardhat scripts/deploy.js --network [NETWORK]
-```
+
+### Frontend Integration
 
 5. Adding support in the frontend:
 
@@ -37,9 +45,13 @@ npx hardhat scripts/deploy.js --network [NETWORK]
      ```
      Replace `<chain_id>` with the ID of the new chain, `<disperse_address>` with the address of the deployed Disperse contract, `<block_explorer_url>` with the URL of the block explorer for the chain, and `<chain_name>` with the name of the chain.
 
+### Contract Verification
+
 6. Verifying the contract with the relevant chain block explorer:
 
-   - Follow the instructions provided in the Hardhat documentation at https://hardhat.org/hardhat-runner/docs/guides/verifying to verify the deployed contract on the new network's block explorer.
+   - Follow the instructions provided in the [Hardhat verification guide](https://hardhat.org/hardhat-runner/docs/guides/verifying) to verify the deployed contract on the new network's block explorer.
+
+### Documentation Update
 
 7. Updating the README:
    - Edit the README file of the project.
