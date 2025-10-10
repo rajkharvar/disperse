@@ -10,9 +10,9 @@ The Disperse app allows you to distribute any ERC20 tokens or ethers to multiple
 2. Install the dependencies:
 
 ```bash
-npm start
+npm install
 # or
-yarn start
+yarn
 ```
 
 3. Modify the hardhat.config.js file to include the new network. Refer to the documentation at https://hardhat.org/hardhat-runner/docs/config for guidance.
